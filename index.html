@@ -4,23 +4,114 @@
   <head>
     <meta charset="utf-8">
     <title>Ines</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+    body{
+
+      padding: 70px;
+      /*background: url("https://images.unsplash.com/photo-1432821579285-1b649e5b1ce3?dpr=0.5&auto=format&crop=entropy&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb") no-repeat center center fixed; */
+      background: url("background_hp1.jpg");
+      height: 100%;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /*font-family: 'Raleway';*/
+      /*font-family: 'Open Sans Condensed', sans-serif;*/
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.4446;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+      color: white;
+    }
+
+    h1{
+      text-align: center;
+    }
+    .rheader{
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+    }
+    .rcontent {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+    }
+    p{
+      max-width: 600px;
+
+    }
+    ul{
+      padding-top: 15px;
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      display: inline-block;
+      padding-right: 30px;
+    }
+    a{
+      font-size: 1.3em;
+    }
+
+    .col-sm-4 {
+      text-align: right;
+    }
+    ol{
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ol li {
+      padding-bottom: 15px;
+      line-height: 1.42857143;
+    }
+
+    @media (max-width: 800px) {
+      .col-sm-4 {
+        text-align: left;
+        margin-top: 1.1em;
+      }
+    }
+
+    </style>
   </head>
   <body>
 
-      <h1>Ines</h1>
-
-      <h2>About me</h2>
-      <ul>
-        <li><a href="https://www.facebook.com/InesRaphaela">Facebook</a></li>
-        <li><a href="https://www.linkedin.com/in/ines-koch-367469b7">Linkedin</a></li>
-      </ul>
-
-      <h2>Homework</h2>
-      <ol>
-        <li><a href="homework/homework-1/homework-1.html">Homework 1</a></li>
-        <li><a href="homework/homework-2/homework-3.html">Homework 2</a></li>
-        <li><a href="homework/homework-3/homework-3.html">Homework 3</a></li>
-      </ol>
-
+    <div class="container">
+      <div class="row rheader">
+        <h1>Hi, I am Ines!</h1>
+      </div>
+      <div class="row rcontent">
+        <div class="col-sm-8">
+            <h2>About me</h2>
+            <p>
+            My name is Ines and I come from Germany. I studied Mechatronics in Munich and work as sofware developer at Tesla and code in Python. In my free time I love playing sand-volleyball, cooking and picking up my guitar after a long day to relax.
+            </p><p>
+            I am excited about learning and making things. Pretty and sophisticated applications that improve our lives facinate me, so yeah I'd like to accelerate my web development skills and essentially roll out my own web app(s).
+            </p><p>
+              Feel free to shoot me a message on slack. I'm looking forward to connecting with you.
+            </p>
+            <ul>
+            <li><a href="https://www.facebook.com/InesRaphaela">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/in/ines-koch-367469b7">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+          <h2>Homework</h2>
+          <ol>
+             <li><a href="homework/homework-1/homework-1.html">Homework 1</a></li>
+             <li><a href="homework/homework-2/homework-3.html">Homework 2</a></li>
+             <li><a href="homework/homework-3/homework-3.html">Homework 3</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
     </body>
   </html>
