@@ -1,7 +1,5 @@
 /*
 * Homework solution
-* 
-* 
 */
 
 function calcFahrenheitToCelcius (fTemp){
@@ -19,7 +17,7 @@ function calcCelciusToFarenheit (cTemp){
 	// @return num - fTemp 
 	var fTemp = cTemp * 9 / 5 + 32;
 	fTemp = Math.round(fTemp);
-	return fTemp
+	return fTemp;
 }
 
 function calcCircumference (radius){
@@ -27,7 +25,7 @@ function calcCircumference (radius){
 	// @param num - radius
 	// @return num - circ
 	var circ = Math.PI * 2 * radius;
-	circ = roundWithDec(circ, 1)
+	circ = roundWithDec(circ, 1);
 	return circ;
 }
 
