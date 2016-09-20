@@ -30,13 +30,16 @@ function calcCircumference (radius){
 }
 
 function calcLongestSide (a, b){
-	// Calculates the length of the hypotenuse of a triange
+	// Calculates the length of the hypotenuse of a triangle
 	// @param num - a
 	// @param num - b
 	// @return num - c
-	var c = Math.sqrt((a * a) + (b * b));
-	c = roundWithDec(c, 1);
-	return c;
+	if (a != 0 && b != 0){
+		var c = Math.sqrt((a * a) + (b * b));
+		c = roundWithDec(c, 1);
+		return c;
+	}
+	return "";
 }
 
 function roundWithDec (number, dec){
