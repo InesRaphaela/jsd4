@@ -37,6 +37,7 @@ function generateStartup() {
 	// generate two random index numbers, one for each array
 	var xIndex = createNum(0, startupX.length);
 	var yIndex = createNum(0, startupY.length);
+	console.log(xIndex, yIndex)
 
 	// concatenate the fixed text with the two random values
 	// to create a new startup idea like:
@@ -78,7 +79,7 @@ function printFavorites() {
 
 // creates a random number between [min, max[
 function createNum(min,max) {
-	return Math.floor(Math.random()*(max-min))+min
+	return Math.floor(Math.random() * max + min);
 }
 
 // checks if item already exists in array
