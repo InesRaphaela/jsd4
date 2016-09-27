@@ -31,7 +31,7 @@ generateStartup();
 // ------------------------------------------
 
 // the generateStartup function is called when
-// the "Generate New Startup" button is clicked
+// the 'Generate New Startup' button is clicked
 function generateStartup() {
 
 	// generate two random index numbers, one for each array
@@ -40,17 +40,17 @@ function generateStartup() {
 
 	// concatenate the fixed text with the two random values
 	// to create a new startup idea like:
-	// "A startup that is Apple, but for Trello"
-	x = startupX[xIndex];
-	y = startupY[yIndex];
-	startupIdea = "A startup that is " + x + " but for "+ y;
+	// 'A startup that is Apple, but for Trello'
+	var x = startupX[xIndex];
+	var y = startupY[yIndex];
+	startupIdea = 'A startup that is ' + x + ', but for '+ y;
 
 	// DONE: Update page with new startup idea
 	startup.innerHTML = startupIdea;
 }
 
 // the saveFavorite function is called when
-// the "Save Favorite" button is clicked
+// the 'Save Favorite' button is clicked
 function saveFavorite() {
 	// add the new idea to the array if item not in array
 	if (contains(favorites, startupIdea) === false) {
@@ -59,16 +59,16 @@ function saveFavorite() {
 }
 
 // the Print Favorites function is called when
-// the "Print Favorites" button is clicked
+// the 'Print Favorites' button is clicked
 function printFavorites() {
 	// clear out favorites section each time
 	// before displaying new list of favorites
 	list.innerHTML = '';
 
 	// concatenate all the favorites into one string
-	var favoritesText = ""
+	var favoritesText = '';
 	favorites.forEach(function(favorite) {
-		favoritesText += favorite + "<br />";
+		favoritesText += favorite + '<br />';
 	});
 
 	// update the list element with the
