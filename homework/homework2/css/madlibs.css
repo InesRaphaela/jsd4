@@ -1,22 +1,32 @@
 body {
-	background: #89998F;
-	font-family: "Avenir", Arial, sans-serif;
+	background: #616161;
+	color: #FFF;
 	text-align: center;
 	padding: 20px;
 	min-width: 375px;
 	max-width: 500px;
+	margin: 20px auto;
+	font-family: 'Roboto', sans-serif;
+    line-height: 1.4446;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: white;
 }
 button {
-	background: #5ABD7F;
+	background: #369882;
 	color: #F4FFF8;
 	border: 1px solid #87B899;
 	border-radius: 5px;
 	line-height: 40px;
 	margin: 0 5px;
 	padding: 0 20px;
-	font-family: "Avenir", Arial, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	cursor: pointer;
+}
+a{
+	text-decoration: none;
+	color: white;
 }
 .startup {
 	margin: 20px 0;
@@ -24,4 +34,5 @@ button {
 .list {
 	margin-top: 20px;
 	line-height: 30px;
+	margin-bottom: 80px;
 }
