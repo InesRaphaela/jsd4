@@ -54,9 +54,10 @@ function generateStartup() {
 // the 'Save Favorite' button is clicked
 function saveFavorite() {
 	// add the new idea to the array if item not in array
-	if (contains(favorites, startupIdea) === false) {
+	if (!contains(favorites, startupIdea)) { // you can also do: (favorites.indexOf(startupIdea) === -1)
 		favorites.push(startupIdea);
 	}
+
 }
 
 // the Print Favorites function is called when
@@ -88,6 +89,6 @@ function contains(arr, item) {
         if (arr[i] === item) {
             return true;
         }
+    return false;    
     }
-    return false;
 }
