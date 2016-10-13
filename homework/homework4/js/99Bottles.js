@@ -1,51 +1,45 @@
-// Elements
-// ------------------------------------------
-
-var lyrics = document.querySelector(".lyrics");
-
-// var paragraph = "<span>48</span> <span class='bottle'>bottles</span>  of beer on the wall,<span>48</span> <span class='bottle'>bottles</span> of beer. <br/> Take one down and pass it around, <span>48</span> <span class='bottle'>bottles</span>  of beer on the wall.";
-// var p = "33 bottles of beer on the wall, 33 bottles of beer.<br/> Take one down and pass it around, 32 bottles of beer on the wall."
-// console.log(paragraph)
-
-
-// Update page
-// ------------------------------------------
-
+// helpermethod to capitalize first letter of any string obj
 String.prototype.capitalizeFirstLetter = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-console.log("99 bottles of beer on the wall!");
+// receive unordered listed
+var lyrics = document.querySelector(".lyrics");
 
-var paragraph = "";
+
 
 for(var i = 99; i >= 0; i--) {
-
-	// create string
-	if (i===0) {
-		second = "Go to the store and buy some more, 99 bottles of beer on the wall."
+	// create first line
+	var firstLine = getBottleString(i).capitalizeFirstLetter() + " of beer on the wall, " +  getBottleString(i) + " of beer.<br/>";
+	// create secod line
+	var secondLine = "";
+	if (i!==0) {
+		secondLine = "Take one down and pass it around, " + getBottleString(i - 1) + " of beer on the wall.";
 	} else {
-		second = "Take one down and pass it around, " + getString(i - 1) + " of beer on the wall.";
+		secondLine = "Go to the store and buy some more, 99 bottles of beer on the wall."
 	}
-	paragraph = getString(i).capitalizeFirstLetter() + " of beer on the wall, " +  getString(i) + " of beer.<br/>" + second;
+	// concatenate both lines to paragraoh
+	var paragraph = firstLine + secondLine;
 	
-	// add to page
+	// create li element
 	var li = document.createElement("li");
 
+	// update value
 	li.innerHTML = paragraph;
-	lyrics.appendChild(li);
 
+	// add li to lyrics list
+	lyrics.appendChild(li);
 }
 
-
-function getString(bottles) {
+// gets the right string that is composed of number of bottles and bottles or 
+// an alternative string 
+function getBottleString(bottles) {
 	if (bottles===0) {
 		return "no more bottles ";
 	}
 	if (bottles===1) {
 		return "1 bottle ";
 	}
-	if (bottles)
 	return String(bottles) + " bottles ";
 }
 
