@@ -23,17 +23,18 @@ The first console.log should return the following:
 console.log( 
 	"\n", "####################", "Part2:", "####################"
 	);
-
 flickerItems = flickerObj["items"];
-for (key in flickerItems) {
-	if (flickerItems.hasOwnProperty(key)) {
-		console.log(flickerItems[key]["title"]+ ". " + flickerItems[key]["date_taken"])
-	}
-}
+flickerItems.forEach(function(item) {
+	console.log(item["title"] + ". " + item["date_taken"]);
+});
 
-
-
-
+// Another solution
+// flickerItems = flickerObj["items"];
+// for (key in flickerItems) {
+// 	if (flickerItems.hasOwnProperty(key)) {
+// 		console.log(flickerItems[key]["title"]+ ". " + flickerItems[key]["date_taken"])
+// 	}
+// }
 
 // /*
 // Part 3. Create a new array called 'links'. Iterate through the 
@@ -41,13 +42,18 @@ for (key in flickerItems) {
 // item in the 'links' array.
 // */
 
-
-var links = []
-for (key in flickerItems) {
-	if (flickerItems.hasOwnProperty(key)) {
-		links.push(flickerItems[key]["link"]);
-	}
-}
+var links = [];
+flickerItems.forEach(function(item) {
+	links.push(item["link"]);
+});
+console.log(links);
+// Another solution
+// var links = [];
+// for (key in flickerItems) {
+// 	if (flickerItems.hasOwnProperty(key)) {
+// 		links.push(flickerItems[key]["link"]);
+// 	}
+// }
 
 
 
@@ -69,7 +75,7 @@ console.log("produced valid JsonString - checked on http://jsonlint.com/");
 
 
 // check also here if Json String - Just for fun
-console.log("wrote function to check if valid json string - it returns: ", isJsonString(jsonStr));
+console.log("check with function if valid json string - it returns: ", isJsonString(jsonStr));
 
 function isJsonString(str) {
     try {
