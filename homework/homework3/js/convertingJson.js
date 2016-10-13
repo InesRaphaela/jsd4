@@ -42,6 +42,10 @@ flickerItems.forEach(function(item) {
 // item in the 'links' array.
 // */
 
+console.log( 
+	"\n", "####################", "Part3:", "####################"
+	);
+
 var links = [];
 flickerItems.forEach(function(item) {
 	links.push(item["link"]);
